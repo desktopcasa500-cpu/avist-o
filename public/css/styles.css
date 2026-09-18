@@ -589,3 +589,7 @@ body.atelier-page{background:var(--wine);color:#fff}
   .atelier-access-grid{margin-top:32px}
   .atelier-map,.atelier-map iframe{min-height:360px}
 }
+
+.section-dark{background:var(--black);color:#fff}
+.footer-brand{display:block}
+.site-footer-dark{background:#171315}
