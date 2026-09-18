@@ -1,0 +1,17 @@
+{
+  "name": "loja-avistao",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site institucional da Loja Avistão e Ateliê Maria Emília, Pouso Redondo - SC.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
