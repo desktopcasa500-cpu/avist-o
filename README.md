@@ -1,38 +1,51 @@
 # Loja Avistão
 
-Site institucional/comercial da **Loja Avistão** e do **Ateliê Maria Emília**, em Pouso Redondo - SC.
+Site institucional da **Loja Avistão** e do **Ateliê Maria Emília**, em Pouso Redondo - SC.
+
+## Direção visual
+
+O projeto foi reescrito como uma vitrine editorial de varejo, tomando como referência a linguagem de grandes e-commerces: navegação limpa, tipografia forte, hero em tela grande, blocos de campanha, composição em grade e chamadas curtas.
+
+A referência visual não é copiada literalmente. O sistema foi adaptado para a identidade da Avistão, usando a logo oficial, vermelho, preto e branco.
 
 ## Estrutura
 
-- `server.js`: servidor Express e API simples para registrar contatos.
-- `public/index.html`: página principal.
+- `server.js`: servidor Express e API de contato.
+- `public/index.html`: nova home da Loja Avistão.
 - `public/atelier.html`: página dedicada ao Ateliê Maria Emília.
-- `public/css/styles.css`: identidade visual e responsividade.
-- `public/js/main.js`: menu mobile e formulário.
-- `public/assets/`: placeholders de imagem e favicon.
-- `data/contatos.json`: criado automaticamente quando o primeiro contato é enviado.
+- `public/css/styles.css`: sistema visual completo e responsivo.
+- `public/js/main.js`: menu mobile, ano do rodapé, navegação e pequenos comportamentos.
+- `public/assets/logo-avistao.png`: logo enviada pelo proprietário a partir do perfil da loja.
+- `public/assets/loja-placeholder.svg`: imagem provisória da loja.
+- `public/assets/atelier-placeholder.svg`: imagem provisória do ateliê.
 
-## Rodar localmente
+## Rodar
 
 ```bash
 npm install
 npm start
 ```
 
-Abra:
+Depois abra `http://localhost:3000`.
 
-```
-http://localhost:3000
-```
+## Conteúdo real a substituir
 
-## Conteúdo que deve ser trocado antes da divulgação
+As duas imagens provisórias devem ser trocadas por fotos reais da fachada, interior, roupas ou Ateliê.
 
-1. Substitua `public/assets/loja-placeholder.svg` por uma foto real da fachada/interior.
-2. Substitua `public/assets/atelier-placeholder.svg` por uma foto real do Ateliê Maria Emília.
-3. Atualize o horário em `public/index.html` no elemento `data-editable-hours`.
-4. O formulário grava contatos localmente em `data/contatos.json`; em uma hospedagem serverless, troque isso por banco de dados ou serviço de e-mail.
-5. O mapa usa o endereço informado e pode ser refinado para o ponto exato da entrada do ateliê quando houver uma referência mais precisa.
+O Instagram oficial `@loja_avistao` está integrado por embed e também aparece nos links principais do site.
 
-## Observação de acesso ao ateliê
+O horário continua marcado como "Horário a confirmar" até existir uma informação oficial.
 
-O site já destaca que a entrada do Ateliê Maria Emília fica na rua de trás, com acesso por escada, e que atualmente não existe uma placa visível indicando a entrada.
+## Informações do negócio
+
+**Loja Avistão**  
+R. Querino Ferrari - Centro  
+Pouso Redondo - SC, 89172-000
+
+**WhatsApp:** (47) 99762-7662
+
+**Instagram:** @loja_avistao
+
+**Facebook:** Loja Avistão / avistaoLojaa
+
+**Ateliê Maria Emília:** entrada pela rua de trás do prédio, com acesso por escada.
