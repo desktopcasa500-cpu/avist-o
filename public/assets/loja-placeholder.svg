@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <rect width="1200" height="900" fill="#d9c8b7"/>
+  <rect x="110" y="110" width="980" height="680" rx="32" fill="#b55e3e"/>
+  <rect x="180" y="195" width="300" height="430" rx="18" fill="#f6f0e8"/>
+  <rect x="520" y="170" width="500" height="75" rx="16" fill="#27231f"/>
+  <text x="760" y="220" text-anchor="middle" fill="#f6f0e8" font-family="Georgia, serif" font-size="48">LOJA AVISTÃO</text>
+  <rect x="520" y="295" width="210" height="250" rx="18" fill="#6e2936"/>
+  <rect x="770" y="295" width="250" height="250" rx="18" fill="#efe5da"/>
+  <circle cx="620" cy="675" r="54" fill="#bd9b63"/>
+  <circle cx="770" cy="675" r="54" fill="#f6f0e8"/>
+  <circle cx="920" cy="675" r="54" fill="#6e2936"/>
+</svg>
