@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const fs = require("fs/promises");
+const { randomUUID } = require("crypto");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -55,7 +56,7 @@ app.post("/api/contato", async (req, res) => {
 
     const contatos = JSON.parse(await fs.readFile(CONTACTS_FILE, "utf8"));
     contatos.push({
-      id: crypto.randomUUID(),
+      id: randomUUID(),
       nome,
       telefone,
       assunto,
