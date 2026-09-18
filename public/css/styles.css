@@ -48,7 +48,8 @@ button{cursor:pointer}
 .header-inner{
   min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:30px
 }
-.brand{display:inline-flex;align-items:center;gap:11px;text-decoration:none}
+.brand{display:inline-flex;align-items:center;text-decoration:none}
+.brand-logo{display:block;width:58px;height:58px;object-fit:contain;border-radius:50%}
 .brand-mark{
   width:34px;height:34px;display:grid;place-items:center;
   background:var(--black);color:#fff;font-weight:900;font-size:16px
