@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <rect width="1200" height="900" fill="#261c1f"/>
+  <rect x="108" y="94" width="984" height="712" rx="38" fill="#6e2936"/>
+  <path d="M510 655 600 285l90 370-90 75Z" fill="#bd9b63"/>
+  <path d="M460 500h280" stroke="#f6f0e8" stroke-width="15" stroke-linecap="round" opacity=".9"/>
+  <circle cx="600" cy="243" r="42" fill="#f6f0e8"/>
+  <text x="600" y="744" text-anchor="middle" fill="#fffaf4" font-family="Georgia, serif" font-size="44">ATELIÊ MARIA EMÍLIA</text>
+</svg>
