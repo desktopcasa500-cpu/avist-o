@@ -1,8 +1,8 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const siteMenu = document.querySelector("#site-menu");
-const contactForm = document.querySelector("#contact-form");
-const formStatus = document.querySelector("#form-status");
 const year = document.querySelector("#year");
+const searchTrigger = document.querySelector("[data-scroll-search]");
+const header = document.querySelector(".site-header");
 
 if (year) {
   year.textContent = new Date().getFullYear();
@@ -10,8 +10,8 @@ if (year) {
 
 if (menuToggle && siteMenu) {
   menuToggle.addEventListener("click", () => {
-    const isOpen = siteMenu.classList.toggle("is-open");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    const open = siteMenu.classList.toggle("is-open");
+    menuToggle.setAttribute("aria-expanded", String(open));
   });
 
   siteMenu.querySelectorAll("a").forEach((link) => {
@@ -22,46 +22,24 @@ if (menuToggle && siteMenu) {
   });
 }
 
-if (contactForm) {
-  contactForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    formStatus.textContent = "";
-    formStatus.className = "form-status";
-
-    const submitButton = contactForm.querySelector("button[type='submit']");
-    const data = Object.fromEntries(new FormData(contactForm).entries());
-
-    if (!data.nome?.trim() || !data.telefone?.trim() || !data.mensagem?.trim()) {
-      formStatus.textContent = "Preencha nome, telefone e mensagem.";
-      formStatus.classList.add("error");
-      return;
-    }
-
-    submitButton.disabled = true;
-    submitButton.textContent = "Enviando...";
-
-    try {
-      const response = await fetch("/api/contato", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-      });
-
-      const result = await response.json();
-
-      if (!response.ok || !result.ok) {
-        throw new Error(result.message || "Não foi possível enviar.");
-      }
-
-      contactForm.reset();
-      formStatus.textContent = result.message;
-      formStatus.classList.add("success");
-    } catch (error) {
-      formStatus.textContent = "Não foi possível registrar agora. Fale diretamente pelo WhatsApp.";
-      formStatus.classList.add("error");
-    } finally {
-      submitButton.disabled = false;
-      submitButton.textContent = "Enviar mensagem";
-    }
+if (searchTrigger) {
+  searchTrigger.addEventListener("click", () => {
+    document.querySelector("#contato")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
   });
+}
+
+if (header) {
+  const updateHeader = () => {
+    header.classList.toggle("is-scrolled", window.scrollY > 8);
+  };
+
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
+}
+
+if (window.instgrm?.Embeds) {
+  window.instgrm.Embeds.process();
 }
